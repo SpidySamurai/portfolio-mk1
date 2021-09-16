@@ -1,5 +1,6 @@
 const path = require("path"); //Access where you move dir, local or cloud
 const htmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const copyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
@@ -10,25 +11,39 @@ module.exports = {
   resolve: {
     extensions: [".js"],
   },
-  module: {
-    rules: [
-      {
-        test: /\.js?$/,
-        exclude: /node_module/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
-    ],
-  },
   plugins: [
     new htmlWebpackPlugin({
       inject: true,
       template: "./public/index.html",
       filename: "./index.html",
     }),
-    new copyWebpackPlugin({
-      patterns: [{ from: "./src/styles/style.css", to: "" }],
+    // new copyWebpackPlugin({
+    //   patterns: [{ from: "./src/styles/styles.css", to: "" }],
+    // }),
+    new MiniCSSExtractPlugin({
+      filename: "index.css",
     }),
   ],
+  module: {
+    rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
+      {
+        test: /\.css|.s[ac]ss$/i,
+        use: [
+          // Creates `style` nodes from JS strings
+          MiniCSSExtractPlugin.loader,
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
+    ],
+  },
 };
