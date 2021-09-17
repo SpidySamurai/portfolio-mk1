@@ -1,7 +1,7 @@
 const path = require("path"); //Access where you move dir, local or cloud
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
-const copyWebpackPlugin = require("copy-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: "./src/index.js",
   output: {
@@ -17,9 +17,14 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html",
     }),
-    // new copyWebpackPlugin({
-    //   patterns: [{ from: "./src/styles/styles.css", to: "" }],
-    // }),
+    new CopyPlugin({
+      patterns: [
+        {
+          from: path.resolve(__dirname, "src", "utils/img"), //one file or the full dir
+          to: "assets/images",
+        },
+      ],
+    }),
     new MiniCSSExtractPlugin({
       filename: "index.css",
     }),
@@ -43,6 +48,10 @@ module.exports = {
           // Compiles Sass to CSS
           "sass-loader",
         ],
+      },
+      {
+        test: /\.svg|.png|.jpg/,
+        type: "asset/resource",
       },
     ],
   },
