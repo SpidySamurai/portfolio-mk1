@@ -1,0 +1,29 @@
+.footer {
+  padding: 2rem;
+  .contact__title {
+    font-size: $h2;
+  }
+  p {
+    margin-top: 1.2rem;
+    font-size: $p;
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1.6rem;
+    align-items: center;
+    width: 100%;
+    min-width: 28rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    justify-items: center;
+    img {
+      width: 5rem;
+    }
+  }
+  h3 {
+    font-size: $p;
+    text-align: end;
+  }
+}
