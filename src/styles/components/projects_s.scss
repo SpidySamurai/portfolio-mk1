@@ -1,0 +1,16 @@
+.projects {
+  padding: 2rem;
+  width: 100%;
+  &__title {
+    margin-top: 1.6rem;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 2rem;
+    // padding-top: 5rem;
+  }
+}
