@@ -1,10 +1,12 @@
 .projects {
-  padding: 2rem;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
   &__title {
-    margin-top: 1.6rem;
-    font-size: 2.4rem;
-    font-weight: bold;
+    // margin-top: 1.6rem;
+    font-size: $h2;
   }
   &__container {
     display: flex;

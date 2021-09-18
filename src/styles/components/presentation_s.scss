@@ -1,13 +1,13 @@
 .presentation {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  position: relative;
   height: 25rem;
   background: linear-gradient(246.4deg, #2337ee 5%, rgba(44, 44, 44, 0) 100.8%), #616161;
   &__container {
     width: 85%;
+    max-width: 60rem;
     height: 85%;
     &__title {
       font-size: $h1;
@@ -18,12 +18,12 @@
       span {
         font-weight: bold;
         background: linear-gradient(90deg, green, white, red);
-        background-clip: linear-gradient(90deg, green, white, red);
+        background-clip: border-box;
         -webkit-background-clip: text;
         color: transparent;
       }
     }
-    button {
+    &__button {
       position: absolute;
       left: calc(50% - 6.3rem);
       top: 23rem;
@@ -40,6 +40,10 @@
       box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
       border: none;
       border-radius: 5px;
+      a {
+        text-decoration: none;
+        color: $bright-color;
+      }
     }
   }
 }

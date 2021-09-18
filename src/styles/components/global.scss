@@ -11,6 +11,9 @@ $h1: 3.4rem;
 $h2: 2.4rem;
 $h3: 2rem;
 $p: 1.6rem;
+
+$breakpoint_desktop: 102.4rem;
+
 //Mixins
 * {
   margin: 0;
@@ -23,4 +26,5 @@ html {
   background-color: $background-color;
   font-family: $Font1;
   color: $bright-color;
+  scroll-behavior: smooth;
 }
