@@ -1,0 +1,140 @@
+@media (min-width: 1024px) {
+  .header {
+    height: 7rem;
+    &__logo {
+      font-size: 5rem;
+      margin-left: 3.5rem;
+    }
+    &__nav {
+      margin-right: calc(50% - 12rem);
+      ul {
+        li {
+          margin-left: 1rem;
+          margin-right: 1rem;
+          a {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+
+  .presentation {
+    height: 52rem;
+    &__container {
+      max-width: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      h1 {
+        font-size: 6rem;
+      }
+      p {
+        width: 42rem;
+        font-size: 4rem;
+      }
+      &__button {
+        top: 49.5rem;
+        font-size: 2rem;
+        padding: 1.4rem;
+      }
+    }
+  }
+
+  .projects {
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      font-size: 3.2rem;
+    }
+  }
+
+  .about {
+    &__title {
+      font-size: 3.2rem;
+    }
+    &__content {
+      flex-direction: row;
+      justify-content: space-evenly;
+      &__img {
+        width: 40%;
+        max-width: 42rem;
+      }
+      &__description {
+        width: 40%;
+        h3 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 2rem;
+          text-align: justify;
+        }
+      }
+    }
+    &__knowledge__container {
+      flex-direction: row;
+      justify-content: space-evenly;
+      max-width: 100rem;
+      margin-top: 5rem;
+      margin-bottom: 5rem;
+      &__section__one {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        &__title {
+          font-size: 2.5rem;
+        }
+      }
+      &__section__two {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 45%;
+        &__title {
+          font-size: 2.5rem;
+        }
+      }
+      p {
+        font-size: 2rem;
+        max-width: 60rem;
+        text-align: justify;
+      }
+    }
+  }
+
+  .footer {
+    // flex-direction: row;
+    &__contact__title {
+      font-size: 3.2rem;
+    }
+    &__contact__content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 90%;
+      max-width: 110rem;
+      &__column__one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        p {
+          font-size: 2rem;
+          width: 80%;
+        }
+      }
+      &__column__two {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+      }
+    }
+  }
+}
