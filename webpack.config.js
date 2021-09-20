@@ -2,14 +2,27 @@ const path = require("path"); //Access where you move dir, local or cloud
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCSSExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, "dist"),
-    filename: "main.js",
+    path: path.resolve(__dirname, "dist"), //Current directory-local
+    filename: "[name].[contenthash].js",
+    assetModuleFilename: "assets/images/[hash][ext][query]",
   },
   resolve: {
     extensions: [".js"],
+    alias: {
+      "@utils": path.resolve(__dirname, "src/utils"),
+      // "@templates": path.resolve(__dirname, "src/templates"),
+      "@styles": path.resolve(__dirname, "src/styles"),
+      "@images": path.resolve(__dirname, "src/assets/images"),
+    },
   },
   plugins: [
     new htmlWebpackPlugin({
@@ -17,18 +30,23 @@ module.exports = {
       template: "./public/index.html",
       filename: "./index.html",
     }),
+    new MiniCSSExtractPlugin({
+      filename: "[name].[contenthash].css",
+    }),
     new CopyPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, "src", "utils/img"), //one file or the full dir
+          from: path.resolve(__dirname, "src", "assets/images"), //one file or the full dir
           to: "assets/images",
         },
       ],
     }),
-    new MiniCSSExtractPlugin({
-      filename: "index.css",
-    }),
+    new CleanWebpackPlugin(),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+  },
   module: {
     rules: [
       {
@@ -50,7 +68,7 @@ module.exports = {
         ],
       },
       {
-        test: /\.svg|.png|.jpg/,
+        test: /\.svg|.png|.jpeg/,
         type: "asset/resource",
       },
     ],
