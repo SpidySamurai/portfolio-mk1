@@ -26,14 +26,14 @@ module.exports = {
     new MiniCSSExtractPlugin({
       filename: "[name].[contenthash].css",
     }),
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "src", "assets/images"), //one file or the full dir
-          to: "assets/images",
-        },
-      ],
-    }),
+    // new CopyPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, "src", "assets/images"), //one file or the full dir
+    //       to: "assets/images",
+    //     },
+    //   ],
+    // }),
   ],
   module: {
     rules: [
