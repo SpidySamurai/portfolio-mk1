@@ -24,7 +24,7 @@ module.exports = {
       filename: "./index.html",
     }),
     new MiniCSSExtractPlugin({
-      filename: "[name].[contenthash].css",
+      filename: "main.css",
     }),
     // new CopyPlugin({
     //   patterns: [
