@@ -16,7 +16,8 @@ const createImageComponent = (containerName, arrayComponent) => {
     const imgIcon = document.createElement("img");
     imgIcon.src = element.source;
     imgIcon.alt = element.alt;
-
+    imgIcon.width = "50";
+    imgIcon.height = "50";
     logos.push(imgIcon);
   });
   container.append(...logos);
@@ -31,6 +32,8 @@ const createImageComponentWLink = (containerName, arrayComponent) => {
     const imgIcon = document.createElement("img");
     imgIcon.src = element.source;
     imgIcon.alt = element.alt;
+    imgIcon.width = "50";
+    imgIcon.height = "50";
     containerLink.appendChild(imgIcon);
     logos.push(containerLink);
   });
