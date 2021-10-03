@@ -2,7 +2,7 @@ import batataB_source from "../../assets/images/project_batata_bit.png";
 import frontendM_source from "../../assets/images/project_frontend_master.png";
 import simonS_source from "../../assets/images/project_simon_says.png";
 import cientifiko_source from "../../assets/images/project_cientifiko_page.png";
-
+import diseno_source from "../../assets/images/project_diseno.png";
 class ProjectCard {
   constructor(source, title, href) {
     this.source = source;
@@ -32,6 +32,12 @@ const cientifikoPC = new ProjectCard(
   "https://spidysamurai.github.io/cientifiko_spa/"
 );
 
-const projects = [batataPC, frontPC, simonSaysPC, cientifikoPC];
+const disenoPC = new ProjectCard(
+  diseno_source,
+  "Diseno web",
+  '"../../assets/images/project_cientifiko_page.png";'
+);
+
+const projects = [batataPC, frontPC, simonSaysPC, cientifikoPC, disenoPC];
 
 export { projects };
