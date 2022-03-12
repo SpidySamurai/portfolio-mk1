@@ -35,7 +35,7 @@ const cientifikoPC = new ProjectCard(
 const disenoPC = new ProjectCard(
   diseno_source,
   "Diseno web",
-  '"../../assets/images/project_cientifiko_page.png";'
+  "https://spidysamurai.github.io/diseno_web/"
 );
 
 const projects = [batataPC, frontPC, simonSaysPC, cientifikoPC, disenoPC];
