@@ -1,19 +1,19 @@
 .header {
   display: flex;
   justify-content: center;
-  height: 5.5rem;
+  align-items: center;
+  height: 7rem;
   background-color: $primary-color-darker;
 
   .header__wrapper {
-    width: 95%;
-    max-width: 144rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 95%;
+    max-width: 144rem;
   }
   &__logo {
     margin-left: 2rem;
-    font-size: 3.5rem;
   }
   &__nav {
     align-items: center;
