@@ -1,13 +1,37 @@
 import {
+  presentationIcons,
   allKnowledgeLogos,
   allKnowledgeCurrentlyLogos,
   contactLogos,
   javiPhoto,
+  jIcon,
+  mxIcon,
 } from "./iconData";
+
+const imgMXFlag = document.querySelector(".presentation__container__mx__icon");
+imgMXFlag.src = mxIcon.source;
+imgMXFlag.alt = mxIcon.alt;
+
+const presentationIconsContainer = document.querySelector(
+  ".presentation__social__grid"
+);
+presentationIcons.forEach((presIcon) => {
+  const presLink = document.createElement("a");
+  const presImg = document.createElement("img");
+
+  presLink.href = presIcon.href;
+  presImg.src = presIcon.source;
+
+  presLink.appendChild(presImg);
+  presentationIconsContainer.appendChild(presLink);
+});
 
 const javiPhotoContainer = document.querySelector(".about__content__img");
 javiPhotoContainer.src = javiPhoto.source;
 javiPhotoContainer.alt = javiPhoto.alt;
+
+const javiWhiteLogoContainer = document.querySelector(".header__logo");
+javiWhiteLogoContainer.src = jIcon.source;
 
 const createImageComponent = (containerName, arrayComponent) => {
   const container = document.querySelector(`.${containerName}`);
@@ -39,6 +63,14 @@ const createImageComponentWLink = (containerName, arrayComponent) => {
   });
   container.append(...logos);
 };
+
+var link = document.querySelector("link[rel~='icon']");
+if (!link) {
+  link = document.createElement("link");
+  link.rel = "icon";
+  document.getElementsByTagName("head")[0].appendChild(link);
+}
+link.href = jIcon.source;
 
 createImageComponent(
   "about__knowledge__container__section__one__grid",

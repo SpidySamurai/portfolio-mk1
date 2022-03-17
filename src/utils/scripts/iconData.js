@@ -1,5 +1,9 @@
+import repositoryBlueSecondary from "../../assets/images/logos_github_secondary.svg";
+import linkedinPresentation from "../../assets/images/logos_whatsapp_preview.svg";
+import whatsappPresentation from "../../assets/images/logos_linkedin_secondary.svg";
+
 import view from "../../assets/images/logos_view_card.svg";
-import repository from "../../assets/images/logos_github_card.svg";
+import repositoryDarkPrimary from "../../assets/images/logos_github_card.svg";
 
 import css from "../../assets/images/logos_css-3.svg";
 import html from "../../assets/images/logos_html-5.svg";
@@ -30,8 +34,28 @@ class Icon {
   }
 }
 
+const repoSecondary = new Icon(
+  repositoryBlueSecondary,
+  "Github Blue Logo",
+  "https://github.com/SpidySamurai"
+);
+const linkedinPres = new Icon(
+  linkedinPresentation,
+  "Linkedin Logo",
+  "https://www.linkedin.com/in/javier-fernando-chi-ortiz/"
+);
+const whatsappPres = new Icon(
+  whatsappPresentation,
+  "Whatsapp Logo",
+  "#"
+);
+let presentationIcons = [repoSecondary, linkedinPres, whatsappPres];
+
 const viewIcon = new Icon(view, "View Icon");
-const repositoryIcon = new Icon(repository, "Github Repository Icon");
+const repositoryIcon = new Icon(
+  repositoryDarkPrimary,
+  "Github Repository Icon"
+);
 
 let repositoryAndViewIcon = [repositoryIcon, viewIcon];
 
@@ -84,6 +108,7 @@ let contactLogos = [fbIcon, linkedinIcon, githubIcon];
 const javiPhoto = new Icon(javiImage, "Javier's photo");
 
 export {
+  presentationIcons,
   repositoryAndViewIcon,
   allKnowledgeLogos,
   allKnowledgeCurrentlyLogos,

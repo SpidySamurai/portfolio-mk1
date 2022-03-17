@@ -2,48 +2,72 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
   height: 25rem;
-  background: linear-gradient(246.4deg, #2337ee 5%, rgba(44, 44, 44, 0) 100.8%), #616161;
   &__container {
     width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     max-width: 60rem;
     height: 85%;
+    &__greeting {
+      position: absolute;
+      bottom: 4rem;
+      font-size: $p;
+    }
     &__title {
+      margin-top: 4rem;
+      position: relative;
       font-size: $h1;
       margin-bottom: 1.6rem;
     }
-    p {
-      font-size: 2.6rem;
-      span {
-        font-weight: bold;
-        background: linear-gradient(90deg, green, white, red);
-        background-clip: border-box;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+    &__mx__icon {
+      object-fit: cover;
+      position: absolute;
+      bottom: 3rem;
+      width: 2.3rem;
+    }
+    &__role {
+      position: absolute;
+      left: 7rem;
+      top: 3.4rem;
+      font-size: 1.8rem;
+      color: #8f8f8f;
     }
     &__button {
-      position: absolute;
-      left: calc(50% - 6.3rem);
-      top: 23rem;
-
+      display: flex;
+      align-items: center;
       padding: 1.2rem;
-      color: $bright-color;
       text-align: center;
 
       font-size: $p;
-      font-weight: bold;
+      font-weight: 600;
       text-decoration: none;
-      background-color: #23a730;
 
       box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
-      border: none;
-      border-radius: 5px;
-      a {
-        text-decoration: none;
-        color: $bright-color;
-      }
+      border-radius: 8px;
+      text-decoration: none;
     }
+    .button_border {
+      border: solid 2px $secondary-color;
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+    .button_fill {
+      background-color: $secondary-color;
+      color: $primary-color;
+    }
+  }
+  &__social__grid {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  &__buttons {
+    margin-top: 3.2rem;
+    display: flex;
+    justify-content: center;
+    gap: 32px;
   }
 }
