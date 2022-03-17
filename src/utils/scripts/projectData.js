@@ -3,39 +3,80 @@ import frontendM_source from "../../assets/images/project_frontend_master.png";
 import simonS_source from "../../assets/images/project_simon_says.png";
 import cientifiko_source from "../../assets/images/project_cientifiko_page.png";
 import diseno_source from "../../assets/images/project_diseno.png";
+
+import {
+  repositoryAndViewIcon,
+  allKnowledgeLogos,
+  allKnowledgeCurrentlyLogos,
+} from "./iconData";
 class ProjectCard {
-  constructor(source, title, href) {
-    this.source = source;
+  constructor(
+    sourceImg,
+    title,
+    hrefToPreview,
+    hrefToRepository,
+    description,
+    repoAndView,
+    technologies
+  ) {
+    this.source = sourceImg;
     this.title = title;
-    this.href = href;
+    this.hrefToPreview = hrefToPreview;
+    this.hrefToRepository = hrefToRepository;
+    this.description = description;
+    this.repoAndView = repoAndView;
+    this.technologies = technologies;
+
+    repositoryAndViewIcon[0].href = hrefToRepository;
+    repositoryAndViewIcon[1].href = hrefToPreview;
   }
 }
 
 const batataPC = new ProjectCard(
   batataB_source,
   "Batata Bit",
-  "https://spidysamurai.github.io/Batata-bit/"
+  "https://spidysamurai.github.io/Batata-bit/",
+  "https://github.com/SpidySamurai/Batata-bit",
+  "CryptoCurrency Landing Page",
+  repositoryAndViewIcon,
+  [allKnowledgeLogos[0], allKnowledgeLogos[1]]
 );
 const frontPC = new ProjectCard(
   frontendM_source,
-  "Landing Page",
-  "https://spidysamurai.github.io/Landing_page/"
+  "FrontEnd Mentor",
+  "https://spidysamurai.github.io/Landing_page/",
+  "https://github.com/SpidySamurai/Landing_page",
+  "Landing page design",
+  repositoryAndViewIcon,
+  [allKnowledgeLogos[0], allKnowledgeLogos[1]]
 );
 const simonSaysPC = new ProjectCard(
   simonS_source,
   "Simon Says",
-  "https://spidysamurai.github.io/Simon_says/"
+  "https://spidysamurai.github.io/Simon_says/",
+  "https://github.com/SpidySamurai/Simon_says",
+  "Simon Says game made in JS Vanilla",
+  repositoryAndViewIcon,
+  [allKnowledgeLogos[0], allKnowledgeLogos[1], allKnowledgeLogos[3]]
 );
 const cientifikoPC = new ProjectCard(
   cientifiko_source,
-  "Cientifiko",
-  "https://spidysamurai.github.io/cientifiko_spa/"
+  "100tifiko",
+  "https://spidysamurai.github.io/cientifiko_spa/",
+  "https://github.com/SpidySamurai/cientifiko_spa",
+  "Single Page Application using Rick and Morty API",
+  repositoryAndViewIcon,
+  [allKnowledgeLogos[0], allKnowledgeLogos[1], allKnowledgeLogos[3]]
 );
 
 const disenoPC = new ProjectCard(
   diseno_source,
-  "Diseno web",
-  "https://spidysamurai.github.io/diseno_web/"
+  "Huddle",
+  "https://spidysamurai.github.io/diseno_web/",
+  "https://github.com/SpidySamurai/diseno_web",
+  "Landing Page",
+  repositoryAndViewIcon,
+  [allKnowledgeLogos[0], allKnowledgeLogos[1]]
 );
 
 const projects = [batataPC, frontPC, simonSaysPC, cientifikoPC, disenoPC];

@@ -1,18 +1,15 @@
 .projects {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding: 4rem 2rem;
   &__title {
     // margin-top: 1.6rem;
+    text-align: left;
     font-size: $h2;
   }
   &__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 2.6rem;
     margin-top: 2rem;
-    // padding-top: 5rem;
   }
 }

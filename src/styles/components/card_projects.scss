@@ -1,21 +1,50 @@
 .card__container {
   width: 90%;
-  max-width: 36rem;
+  max-width: 34rem;
   min-width: 28rem;
-  margin: 1rem;
-  background-color: #343434;
-  border-radius: 1.4rem;
+  padding: 1rem;
+  color: $primary-color-darker;
+  background-color: $secondary-color;
+  border-radius: 0.8rem;
   box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 
-  // height: 200px;
-  overflow: hidden;
   img {
+    border-radius: 0.4rem;
     width: 100%;
-    min-height: 75%;
+    object-fit: cover;
   }
   h3 {
-    margin: 1.4rem auto;
+    margin: 1rem 0;
     font-size: $h3;
-    text-align: center;
+    text-align: left;
+  }
+  p {
+    font-size: $p;
+    font-weight: 500;
+    margin-bottom: 1.2rem;
+  }
+
+  &__icons {
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 30px;
+      object-fit: cover;
+    }
+    div {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      // gap: 1rem;
+    }
+    &__view {
+      min-width: 50%;
+    }
+    &__technologies {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 }
