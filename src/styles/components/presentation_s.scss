@@ -48,6 +48,10 @@
       box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
       border-radius: 8px;
       text-decoration: none;
+      transition: all ease-in-out 0.3s;
+    }
+    &__button:hover {
+      transform: scale(1.1);
     }
     .button_border {
       border: solid 2px $secondary-color;
@@ -63,6 +67,12 @@
     display: flex;
     gap: 1rem;
     margin-top: 1rem;
+    img {
+      transition: all ease-in-out 0.5s;
+    }
+    img:hover {
+      transform: scale(1.1);
+    }
   }
   &__buttons {
     margin-top: 3.2rem;

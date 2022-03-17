@@ -8,6 +8,7 @@
   border-radius: 0.8rem;
   box-shadow: 0 4px 8px rgba(89, 73, 30, 0.16);
 
+  transition: all ease-in-out 0.5s;
   img {
     border-radius: 0.4rem;
     width: 100%;
@@ -37,7 +38,6 @@
       display: flex;
       align-items: center;
       gap: 1.2rem;
-      // gap: 1rem;
     }
     &__view {
       min-width: 50%;
@@ -47,4 +47,8 @@
       justify-content: center;
     }
   }
+}
+
+.card__container:hover {
+  transform: scale(1.05);
 }
