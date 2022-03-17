@@ -1,3 +1,6 @@
+import view from "../../assets/images/logos_view_card.svg";
+import repository from "../../assets/images/logos_github_card.svg";
+
 import css from "../../assets/images/logos_css-3.svg";
 import html from "../../assets/images/logos_html-5.svg";
 import js from "../../assets/images/logos_javascript.svg";
@@ -15,6 +18,9 @@ import fb from "../../assets/images/logos_facebook.svg";
 import linkedin from "../../assets/images/logos_linkedin-icon.svg";
 
 import javiImage from "../../assets/images/profile_image.jpeg";
+import javiWhiteLogo from "../../assets/images/javi_white_logo.svg";
+
+import mxFlag from "../../assets/images/logos_mx.svg";
 
 class Icon {
   constructor(source, alt, href) {
@@ -24,6 +30,13 @@ class Icon {
   }
 }
 
+const viewIcon = new Icon(view, "View Icon");
+const repositoryIcon = new Icon(repository, "Github Repository Icon");
+
+let repositoryAndViewIcon = [repositoryIcon, viewIcon];
+
+const mxIcon = new Icon(mxFlag, "Circle Mexican Flag");
+const jIcon = new Icon(javiWhiteLogo, "Javier's Logo");
 const css3Icon = new Icon(css, "CSS 3 Logo");
 const html5Icon = new Icon(html, "HTML 5 Logo");
 const jsIcon = new Icon(js, "JavaScript Logo");
@@ -39,13 +52,13 @@ const webpackIcon = new Icon(webpack, "Webpack Logo");
 const travisIcon = new Icon(travis, "Travis Logo");
 
 let allKnowledgeLogos = [
-  css3Icon,
   html5Icon,
+  css3Icon,
+  sassIcon,
   jsIcon,
+  figmaIcon,
   gitIcon,
   githubIcon,
-  sassIcon,
-  figmaIcon,
   webpackIcon,
   travisIcon,
 ];
@@ -71,8 +84,11 @@ let contactLogos = [fbIcon, linkedinIcon, githubIcon];
 const javiPhoto = new Icon(javiImage, "Javier's photo");
 
 export {
+  repositoryAndViewIcon,
   allKnowledgeLogos,
   allKnowledgeCurrentlyLogos,
   contactLogos,
   javiPhoto,
+  jIcon,
+  mxIcon,
 };
