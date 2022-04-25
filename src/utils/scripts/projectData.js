@@ -3,6 +3,7 @@ import frontendM_source from "../../assets/images/project_frontend_master.png";
 import simonS_source from "../../assets/images/project_simon_says.png";
 import cientifiko_source from "../../assets/images/project_cientifiko_page.png";
 import diseno_source from "../../assets/images/project_diseno.png";
+import todoMachine_source from "../../assets/images/project_todomachine.png";
 
 import {
   repositoryAndViewIcon,
@@ -50,6 +51,15 @@ const frontPC = new ProjectCard(
   repositoryAndViewIcon,
   [allKnowledgeLogos[0], allKnowledgeLogos[1]]
 );
+const disenoPC = new ProjectCard(
+  diseno_source,
+  "Huddle",
+  "https://spidysamurai.github.io/diseno_web/",
+  "https://github.com/SpidySamurai/diseno_web",
+  "Landing Page",
+  repositoryAndViewIcon,
+  [allKnowledgeLogos[0], allKnowledgeLogos[1]]
+);
 const simonSaysPC = new ProjectCard(
   simonS_source,
   "Simon Says",
@@ -68,17 +78,28 @@ const cientifikoPC = new ProjectCard(
   repositoryAndViewIcon,
   [allKnowledgeLogos[0], allKnowledgeLogos[1], allKnowledgeLogos[3]]
 );
-
-const disenoPC = new ProjectCard(
-  diseno_source,
-  "Huddle",
-  "https://spidysamurai.github.io/diseno_web/",
-  "https://github.com/SpidySamurai/diseno_web",
-  "Landing Page",
+const todoMachine = new ProjectCard(
+  todoMachine_source,
+  "TODO List",
+  "https://spidysamurai.github.io/react-to-do/",
+  "https://github.com/SpidySamurai/react-to-do",
+  "TODO List App using React putting into practice knowledge such as managing state, effects, and context, applying render patterns and component composition.",
   repositoryAndViewIcon,
-  [allKnowledgeLogos[0], allKnowledgeLogos[1]]
+  [
+    allKnowledgeLogos[0],
+    allKnowledgeLogos[1],
+    allKnowledgeLogos[3],
+    allKnowledgeCurrentlyLogos[2],
+  ]
 );
 
-const projects = [batataPC, frontPC, simonSaysPC, cientifikoPC, disenoPC];
+const projects = [
+  batataPC,
+  frontPC,
+  disenoPC,
+  simonSaysPC,
+  cientifikoPC,
+  todoMachine,
+];
 
 export { projects };

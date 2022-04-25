@@ -9,6 +9,8 @@ const createProjectCards = (containerName, projects) => {
 
     const projectLink = document.createElement("a");
     projectLink.href = project.hrefToPreview;
+    projectLink.target = "_blank";
+    projectLink.rel = "noopener noreferrer";
 
     const projectImg = document.createElement("img");
     projectImg.src = project.source;
