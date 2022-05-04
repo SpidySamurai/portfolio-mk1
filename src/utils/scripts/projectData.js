@@ -4,6 +4,7 @@ import simonS_source from "../../assets/images/project_simon_says.png";
 import cientifiko_source from "../../assets/images/project_cientifiko_page.png";
 import diseno_source from "../../assets/images/project_diseno.png";
 import todoMachine_source from "../../assets/images/project_todomachine.png";
+import pokemon_source from "../../assets/images/project_pokemon.png";
 
 import {
   repositoryAndViewIcon,
@@ -93,6 +94,21 @@ const todoMachine = new ProjectCard(
   ]
 );
 
+const pokemonAPI = new ProjectCard(
+  pokemon_source,
+  "Pokedex with Pokeapi.co",
+  "https://spidysamurai.github.io/react-cura-deuda/",
+  "https://github.com/SpidySamurai/react-cura-deuda",
+  "Pokedex using an Pokemon API, putting in practice React technical knowledge and API consume",
+  repositoryAndViewIcon,
+  [
+    allKnowledgeLogos[0],
+    allKnowledgeLogos[1],
+    allKnowledgeLogos[3],
+    allKnowledgeCurrentlyLogos[2],
+  ]
+);
+
 const projects = [
   batataPC,
   frontPC,
@@ -100,6 +116,7 @@ const projects = [
   simonSaysPC,
   cientifikoPC,
   todoMachine,
+  pokemonAPI,
 ];
 
 export { projects };
