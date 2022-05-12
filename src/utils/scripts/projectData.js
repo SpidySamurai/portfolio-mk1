@@ -5,6 +5,7 @@ import cientifiko_source from "../../assets/images/project_cientifiko_page.png";
 import diseno_source from "../../assets/images/project_diseno.png";
 import todoMachine_source from "../../assets/images/project_todomachine.png";
 import pokemon_source from "../../assets/images/project_pokemon.png";
+import cat_source from "../../assets/images/project_cats_api_consume.png";
 
 import {
   repositoryAndViewIcon,
@@ -34,30 +35,31 @@ class ProjectCard {
   }
 }
 
-const batataPC = new ProjectCard(
-  batataB_source,
-  "Batata Bit",
-  "https://spidysamurai.github.io/Batata-bit/",
-  "https://github.com/SpidySamurai/Batata-bit",
-  "CryptoCurrency Landing Page",
-  repositoryAndViewIcon,
-  [allKnowledgeLogos[0], allKnowledgeLogos[1]]
-);
 const frontPC = new ProjectCard(
   frontendM_source,
   "FrontEnd Mentor",
   "https://spidysamurai.github.io/Landing_page/",
   "https://github.com/SpidySamurai/Landing_page",
-  "Landing page design",
+  "FrontEnd Mentor landing page made with HTML, CSS putting in practice semantic layout and basic css knowledge with flex and classes.",
   repositoryAndViewIcon,
   [allKnowledgeLogos[0], allKnowledgeLogos[1]]
 );
+
 const disenoPC = new ProjectCard(
   diseno_source,
   "Huddle",
   "https://spidysamurai.github.io/diseno_web/",
   "https://github.com/SpidySamurai/diseno_web",
-  "Landing Page",
+  "Huddle Landing page made in collaboration with partners from BrightCoders Academy, putting in practice semantinc layout, intermediate CSS.",
+  repositoryAndViewIcon,
+  [allKnowledgeLogos[0], allKnowledgeLogos[1]]
+);
+const batataPC = new ProjectCard(
+  batataB_source,
+  "Batata Bit",
+  "https://spidysamurai.github.io/Batata-bit/",
+  "https://github.com/SpidySamurai/Batata-bit",
+  "CryptoCurrency Landing Page made with HTML, CSS, from the professional HTML/CSS course from Platzi reinforcing basic and intermediate knowledge as FrontEnd.",
   repositoryAndViewIcon,
   [allKnowledgeLogos[0], allKnowledgeLogos[1]]
 );
@@ -66,16 +68,16 @@ const simonSaysPC = new ProjectCard(
   "Simon Says",
   "https://spidysamurai.github.io/Simon_says/",
   "https://github.com/SpidySamurai/Simon_says",
-  "Simon Says game made in JS Vanilla",
+  "The famous Simon say game made with JS Vanilla with the JavaScript course from Platzi, improving the basic understanding of scripting and sequences.",
   repositoryAndViewIcon,
   [allKnowledgeLogos[0], allKnowledgeLogos[1], allKnowledgeLogos[3]]
 );
 const cientifikoPC = new ProjectCard(
   cientifiko_source,
-  "100tifiko",
+  "Rick and Morty SPA",
   "https://spidysamurai.github.io/cientifiko_spa/",
   "https://github.com/SpidySamurai/cientifiko_spa",
-  "Single Page Application using Rick and Morty API",
+  "Single Page Application using Rick and Morty API, consuming the public API an generating dynamic routes with JS Vanilla.",
   repositoryAndViewIcon,
   [allKnowledgeLogos[0], allKnowledgeLogos[1], allKnowledgeLogos[3]]
 );
@@ -99,7 +101,7 @@ const pokemonAPI = new ProjectCard(
   "Pokedex with Pokeapi.co",
   "https://spidysamurai.github.io/react-cura-deuda/",
   "https://github.com/SpidySamurai/react-cura-deuda",
-  "Pokedex using an Pokemon API, putting in practice React technical knowledge and API consume",
+  "Pokedex using an Pokemon API, putting in practice React technical as States/Effect applytin render pattern with componen composition and API consume",
   repositoryAndViewIcon,
   [
     allKnowledgeLogos[0],
@@ -109,12 +111,23 @@ const pokemonAPI = new ProjectCard(
   ]
 );
 
+const catAPIConsume = new ProjectCard(
+  cat_source,
+  "Cat API Consume",
+  "https://spidysamurai.github.io/API_CONSUME/",
+  "https://github.com/SpidySamurai/API_CONSUME",
+  "This is a small project using fetch with async await to get some random cats ando our favorite ones, also the possibility to mark them as favorites, delete them and upload a cat photo using POST method",
+  repositoryAndViewIcon,
+  [allKnowledgeLogos[0], allKnowledgeLogos[1], allKnowledgeLogos[3]]
+);
+
 const projects = [
-  batataPC,
   frontPC,
   disenoPC,
+  batataPC,
   simonSaysPC,
   cientifikoPC,
+  catAPIConsume,
   todoMachine,
   pokemonAPI,
 ];

@@ -14,6 +14,7 @@ const createProjectCards = (containerName, projects) => {
 
     const projectImg = document.createElement("img");
     projectImg.src = project.source;
+    projectImg.loading = "lazy";
     projectImg.alt = `${project.title} Image`;
 
     const projectTitle = document.createElement("h3");
