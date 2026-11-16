@@ -84,8 +84,8 @@ const cientifikoPC = new ProjectCard(
 const todoMachine = new ProjectCard(
   todoMachine_source,
   "TODO List",
-  "https://spidysamurai.github.io/react-to-do/",
-  "https://github.com/SpidySamurai/react-to-do",
+  "https://spidysamurai.github.io/React-To-Do/",
+  "https://github.com/SpidySamurai/React-To-Do",
   "TODO List App using React putting into practice knowledge such as managing state, effects, and context, applying render patterns and component composition.",
   repositoryAndViewIcon,
   [
