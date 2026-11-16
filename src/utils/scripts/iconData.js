@@ -24,7 +24,6 @@ import node_js from "../../assets/images/logos_node_js.svg";
 import fb from "../../assets/images/logos_facebook.svg";
 import linkedin from "../../assets/images/logos_linkedin-icon.svg";
 
-import javiImage from "../../assets/images/profile_image.jpeg";
 import javiWhiteLogo from "../../assets/images/javi_white_logo.svg";
 
 import mxFlag from "../../assets/images/logos_mx.svg";
@@ -112,7 +111,6 @@ const linkedinIcon = new Icon(
 
 let contactLogos = [fbIcon, linkedinIcon, githubIcon];
 
-const javiPhoto = new Icon(javiImage, "Javier's photo");
 
 export {
   presentationIcons,
@@ -120,7 +118,6 @@ export {
   allKnowledgeLogos,
   allKnowledgeCurrentlyLogos,
   contactLogos,
-  javiPhoto,
   jIcon,
   mxIcon,
 };
