@@ -3,7 +3,6 @@ import {
   allKnowledgeLogos,
   allKnowledgeCurrentlyLogos,
   contactLogos,
-  javiPhoto,
   jIcon,
   mxIcon,
 } from "./iconData";
@@ -25,10 +24,6 @@ presentationIcons.forEach((presIcon) => {
   presLink.appendChild(presImg);
   presentationIconsContainer.appendChild(presLink);
 });
-
-const javiPhotoContainer = document.querySelector(".about__content__img");
-javiPhotoContainer.src = javiPhoto.source;
-javiPhotoContainer.alt = javiPhoto.alt;
 
 const javiWhiteLogoContainer = document.querySelector(".header__logo");
 javiWhiteLogoContainer.src = jIcon.source;
