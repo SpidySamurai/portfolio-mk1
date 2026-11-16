@@ -41,6 +41,9 @@ module.exports = {
     //     },
     //   ],
     // }),
+    new CopyPlugin({
+      patterns: [{ from: path.resolve(__dirname, "public", "og.png"), to: "og.png" }],
+    }),
     new CleanWebpackPlugin(),
   ],
   optimization: {
