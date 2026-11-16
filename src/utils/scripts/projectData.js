@@ -48,8 +48,8 @@ const frontPC = new ProjectCard(
 const disenoPC = new ProjectCard(
   diseno_source,
   "Huddle",
-  "https://spidysamurai.github.io/diseno_web/",
-  "https://github.com/SpidySamurai/diseno_web",
+  "https://spidysamurai.github.io/Huddle_Landing_Page_Excercise/",
+  "https://github.com/SpidySamurai/Huddle_Landing_Page_Excercise",
   "Huddle Landing page made in collaboration with partners from BrightCoders Academy, putting in practice semantinc layout, intermediate CSS.",
   repositoryAndViewIcon,
   [allKnowledgeLogos[0], allKnowledgeLogos[1]]
@@ -75,8 +75,8 @@ const simonSaysPC = new ProjectCard(
 const cientifikoPC = new ProjectCard(
   cientifiko_source,
   "Rick and Morty SPA",
-  "https://spidysamurai.github.io/cientifiko_spa/",
-  "https://github.com/SpidySamurai/cientifiko_spa",
+  "https://spidysamurai.github.io/SPA_rick_and_morty/",
+  "https://github.com/SpidySamurai/SPA_rick_and_morty",
   "Single Page Application using Rick and Morty API, consuming the public API an generating dynamic routes with JS Vanilla.",
   repositoryAndViewIcon,
   [allKnowledgeLogos[0], allKnowledgeLogos[1], allKnowledgeLogos[3]]
@@ -114,8 +114,8 @@ const pokemonAPI = new ProjectCard(
 const catAPIConsume = new ProjectCard(
   cat_source,
   "Cat API Consume",
-  "https://spidysamurai.github.io/API_CONSUME/",
-  "https://github.com/SpidySamurai/API_CONSUME",
+  "https://spidysamurai.github.io/Kittys_api_consuming/",
+  "https://github.com/SpidySamurai/Kittys_api_consuming",
   "This is a small project using fetch with async await to get some random cats ando our favorite ones, also the possibility to mark them as favorites, delete them and upload a cat photo using POST method",
   repositoryAndViewIcon,
   [allKnowledgeLogos[0], allKnowledgeLogos[1], allKnowledgeLogos[3]]
