@@ -1,6 +1,5 @@
 import repositoryBlueSecondary from "../../assets/images/logos_github_secondary.svg";
 import linkedinPresentation from "../../assets/images/logos_linkedin_secondary.svg";
-import whatsappPresentation from "../../assets/images/logos_whatsapp_preview.svg";
 
 import view from "../../assets/images/logos_view_card.svg";
 import repositoryDarkPrimary from "../../assets/images/logos_github_card.svg";
@@ -21,7 +20,6 @@ import expresJS from "../../assets/images/logos_expressJS.svg";
 import react from "../../assets/images/logos_react.svg";
 import node_js from "../../assets/images/logos_node_js.svg";
 
-import fb from "../../assets/images/logos_facebook.svg";
 import linkedin from "../../assets/images/logos_linkedin-icon.svg";
 
 import javiWhiteLogo from "../../assets/images/javi_white_logo.svg";
@@ -46,13 +44,8 @@ const linkedinPres = new Icon(
   "Linkedin Logo",
   "https://www.linkedin.com/in/javier-fernando-chi-ortiz/"
 );
-const whatsappPres = new Icon(
-  whatsappPresentation,
-  "Whatsapp Logo",
-  "#"
-);
 
-let presentationIcons = [repoSecondary, linkedinPres, whatsappPres];
+let presentationIcons = [repoSecondary, linkedinPres];
 
 const viewIcon = new Icon(view, "View Icon");
 const repositoryIcon = new Icon(
@@ -98,18 +91,13 @@ const vueIcon = new Icon(vue, "VUE Logo");
 
 let allKnowledgeCurrentlyLogos = [mongoIcon, expressIcon, reactIcon, nodeIcon];
 
-const fbIcon = new Icon(
-  fb,
-  "Facebook Logo",
-  "#"
-);
 const linkedinIcon = new Icon(
   linkedin,
   "LinkedIn Logo",
   "https://www.linkedin.com/in/javier-fernando-chi-ortiz/"
 );
 
-let contactLogos = [fbIcon, linkedinIcon, githubIcon];
+let contactLogos = [linkedinIcon, githubIcon];
 
 
 export {
